@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>上图馆藏查询 · 隐私政策</title>
+<style>
+  :root {
+    --ink: #1c1e21; --ink-2: #4a4f57; --ink-3: #767c85;
+    --bg: #ffffff; --line: #e6e8eb; --chip: #f5f6f7; --accent: #2f6f4f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8eaed; --ink-2: #b3b8bf; --ink-3: #858b93;
+      --bg: #1b1c1e; --line: #33363a; --chip: #26282b; --accent: #7fc49b;
+    }
+  }
+  * { box-sizing: border-box }
+  body {
+    margin: 0; padding: 40px 20px 72px; background: var(--bg); color: var(--ink);
+    font: 15px/1.75 -apple-system, "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: .01em }
+  .sub { color: var(--ink-3); margin: 0 0 28px; font-size: 13px }
+  h2 { font-size: 17px; margin: 34px 0 10px; padding-top: 2px }
+  p { margin: 0 0 12px }
+  .lead {
+    background: var(--chip); border-left: 3px solid var(--accent);
+    padding: 14px 16px; border-radius: 0 6px 6px 0; margin-bottom: 8px;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 12px; font-size: 14px }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top }
+  th { color: var(--ink-3); font-weight: 600; font-size: 13px }
+  code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 13px }
+  ul { margin: 0 0 12px; padding-left: 22px }
+  li { margin: 4px 0 }
+  a { color: var(--accent) }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 13px }
+</style>
+</head>
+<body>
+<main>
+  <h1>上图馆藏查询 · 隐私政策</h1>
+  <p class="sub">浏览器扩展 · 版本 0.1.0 · 本政策自 2026 年 10 月 29 日起生效</p>
+
+  <div class="lead">
+    <p><b>这个扩展不收集、不上传、不共享任何个人信息。</b>
+    没有服务器，没有账号，没有统计与广告代码，也没有可以上报数据的通道。</p>
+  </div>
+
+  <h2>它在你电脑上做什么</h2>
+  <p>你在豆瓣图书详情页打开侧边栏时，扩展读取当前页面上公开显示的书名、作者、出版社、
+  出版年、ISBN 和封面图，用它们去上海图书馆的公开检索页面查这本书的馆藏，把结果列给你看。
+  这些内容只在你的浏览器里存在和使用，不会被发送到除下述地址以外的任何地方。</p>
+
+  <h2>申请的权限与用途</h2>
+  <table>
+    <tr><th>权限</th><th>用来做什么</th><th>数据去了哪里</th></tr>
+    <tr>
+      <td><code>sidePanel</code></td>
+      <td>在浏览器侧边显示查询结果</td>
+      <td>仅界面能力，不涉及数据</td>
+    </tr>
+    <tr>
+      <td><code>storage</code>（会话存储）</td>
+      <td>把查过的馆藏和版本结果暂存，重开同一本书不用重复请求</td>
+      <td>只存在你自己的浏览器内存里；关掉浏览器即清空，不写入磁盘</td>
+    </tr>
+    <tr>
+      <td><code>geolocation</code></td>
+      <td>计算各网点离你多远并按距离排序</td>
+      <td>坐标只在本机参与计算，不出现在任何请求中。拒绝授权也能用，列表改按可借册数排序</td>
+    </tr>
+    <tr>
+      <td>网络访问：<code>vufind.library.sh.cn</code></td>
+      <td>查询这本书在上海图书馆及各分馆的馆藏</td>
+      <td>这是扩展唯一主动访问的站点，与你自己在浏览器里打开上图检索页是同一件事</td>
+    </tr>
+  </table>
+
+  <h2>会发出的请求，只有两类</h2>
+  <ul>
+    <li>向 <code>vufind.library.sh.cn</code> 查询你正在看的那本书的馆藏与版本信息。</li>
+    <li>在豆瓣图书页面里，取该页面本来就已经在显示的那张封面图，用于在侧边栏里显示同一张图。</li>
+  </ul>
+  <p>扩展不会请求其他任何网址，也不会在后台定时联网。</p>
+
+  <h2>不收集什么</h2>
+  <p>不收集姓名、邮箱、电话、账号、浏览历史、书签、Cookie、设备标识或位置信息；
+  不记录你查过哪些书；没有任何形式的使用统计、日志上报或第三方分析。</p>
+
+  <h2>非官方项目</h2>
+  <p>本扩展与上海图书馆、豆瓣均无隶属或合作关系，也不代表其认可、赞助或背书。
+  馆藏数据来自公开检索页面，界面中出现的名称与标识权利归各自所有者。</p>
+
+  <h2>问题反馈</h2>
+  <p>上面这份清单是可以对着扩展本身核的：它只申请侧边栏、会话存储、定位三项权限，
+  网络访问只允许 <code>vufind.library.sh.cn</code> 一个域名。如有疑问，或发现本政策与实际
+  行为不符，请在 <a href="https://github.com/Giant-Apple/shlib-finder-extension/issues">项目问题页</a> 提出。</p>
+
+  <footer>
+    本页面发布在扩展的项目页上。若本政策有更新，会同时更新扩展版本号与上方的生效日期。
+  </footer>
+</main>
+</body>
+</html>
