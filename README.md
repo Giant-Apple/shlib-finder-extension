@@ -7,7 +7,7 @@ Edge / Chrome 侧边栏扩展：在豆瓣图书详情页直接看这本书在上
 
 ## 安装
 
-从 [Microsoft Edge 加载项](https://microsoftedge.microsoft.com/addons) 搜「上图馆藏查询」。装完点浏览器工具栏上的书本图标即可。
+在 [Microsoft Edge 加载项](https://microsoftedge.microsoft.com/addons/detail/%E4%B8%8A%E5%9B%BE%E9%A6%86%E8%97%8F%E6%9F%A5%E8%AF%A2/kpdbanjmlkfdaebckkjojfbaheojmjok) 安装（商店里搜「上图馆藏查询」也能找到）。装完点浏览器工具栏上的书本图标即可。
 
 ## 能做什么
 
